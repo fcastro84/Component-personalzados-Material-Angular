@@ -1,0 +1,40 @@
+<div class="example-container">
+  <form [formGroup]="options">
+    <mat-checkbox [formControl]="hideRequiredControl">Hide required marker</mat-checkbox>
+    <div>
+      <label>Float label: </label>
+      <mat-radio-group [formControl]="floatLabelControl">
+        <mat-radio-button value="auto">Auto</mat-radio-button>
+        <mat-radio-button value="always">Always</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="example-form-fields">
+      <mat-form-field appearance="fill"
+          [hideRequiredMarker]="hideRequiredControl.value"
+          [floatLabel]="getFloatLabelValue()">
+        <input matInput placeholder="Simple placeholder" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" [floatLabel]="getFloatLabelValue()">
+        <mat-label>Both a label and a placeholder</mat-label>
+        <input matInput placeholder="Simple placeholder">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline"
+          [hideRequiredMarker]="true"
+          [floatLabel]="'always'">
+        <input matInput placeholder="Placeholder" required>
+        <mat-label>
+          <i>Label text *(optional) </i>
+          <mat-icon matTooltip="My tooltip">info</mat-icon>
+        </mat-label>
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+
+
+<!-- Copyright 2023 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->
