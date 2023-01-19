@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl} from '@angular/forms';
 import { FloatLabelType } from '@angular/material/form-field';
+const tippy = require("node_modules/tippy.js/dist/tippy.cjs.js").default;
 
 @Component({
   selector: 'app-form-field-label-example',
@@ -19,5 +20,13 @@ export class FormFieldLabelExampleComponent {
 
   getFloatLabelValue(): FloatLabelType {
     return this.floatLabelControl.value || 'auto';
+  }
+
+  mostrar(id: string, texto: string){
+    tippy(id, {
+      content: texto,
+      arrow: true,
+    });
+
   }
 }

@@ -10,11 +10,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { FormFieldLabelExampleComponent } from './components/form-field-label-example/form-field-label-example.component';
+import { LoginComponent } from './components/login/login.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormFieldLabelExampleComponent
+    FormFieldLabelExampleComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

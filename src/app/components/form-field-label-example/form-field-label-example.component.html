@@ -27,7 +27,8 @@
         <input matInput placeholder="Placeholder" required>
         <mat-label>
           <i>Label text *(optional) </i>
-          <mat-icon matTooltip="My tooltip">info</mat-icon>
+          <mat-icon id="info"
+          (mouseover)="mostrar('#info','Campo personalizado........')">info</mat-icon>
         </mat-label>
       </mat-form-field>
     </div>
