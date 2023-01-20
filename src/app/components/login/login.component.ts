@@ -79,11 +79,18 @@ export class LoginComponent {
 
   mostrar(id: string, texto: string){
     tippy(id, {
+      interactive: true,
+      appendTo: () => document.body,
       content: texto,
       arrow: true,
+      boundary: 'scrollParent',
+      allowHTML: true,
+      theme: 'light-border',
+      trigger: 'click',
+
+
       maxWidth: 750,
       //placement: 'bottom'
-      role: 'popover'
     });
 
   }
