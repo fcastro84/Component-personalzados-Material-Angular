@@ -1,0 +1,15 @@
+
+<mat-form-field appearance="outline"  [hideRequiredMarker]="true" floatLabel="always">
+  <mat-label>{{values.label}}* <mat-icon matSuffix [id]="values.id"
+    (mouseover)="mostrar('#'+values.id, values.texto)">
+    info
+  </mat-icon></mat-label>
+  <mat-icon matPrefix>person</mat-icon>
+  <input matInput autocomplete="off" (input)="onChange( $event )" (blur)="onTouch(); blur.emit()" [ngStyle]="{'border-color': (controlDir.control?.touched && controlDir.control?.invalid) ? '#f44336 !important': ''}"/>
+</mat-form-field>
+<div [class.errorText]="controlDir.control?.touched && controlDir.control?.invalid" *ngIf="controlDir.control?.touched && controlDir.control?.invalid">
+  invalido
+</div>
+
+
+

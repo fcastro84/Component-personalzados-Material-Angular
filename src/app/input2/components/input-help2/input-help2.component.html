@@ -1,0 +1,10 @@
+<div [formGroup]="form">
+<mat-form-field appearance="outline"  [hideRequiredMarker]="true" floatLabel="always">
+  <mat-label>{{values.label}}* <mat-icon matSuffix [id]="values.id"
+    (mouseover)="mostrar('#'+values.id, values.texto)">
+    info
+  </mat-icon></mat-label>
+  <mat-icon matPrefix>person</mat-icon>
+  <input matInput autocomplete="off" [formControlName]="values.name" >
+</mat-form-field>
+</div>

@@ -1,6 +1,44 @@
-
-<div class="mat-typography mat-app-background">
+<!--div class="mat-typography mat-app-background">
   <app-form-field-label-example></app-form-field-label-example>
   <span class="version-info">Current build: 15.0.4</span>
 </div>
-<app-login></app-login>
+<app-login></app-login-->
+<div class="body">
+  <div class="login">
+    <form [formGroup]="form" (ngSubmit)="guardar()">
+      <h1>Example</h1>
+      <app-input-help formControlName="usuario" [values]="values"></app-input-help>
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        class="ancho button" style="margin-top: 25px;"
+        [disabled]="!form.valid"
+      >
+        Acceder
+      </button>
+    </form>
+    <pre>{{ form.valid}}</pre>
+    <pre>{{ form.value | json }}</pre>
+  </div>
+</div>
+
+<div class="body">
+  <div class="login">
+    <form [formGroup]="form2" (ngSubmit)="guardar2()">
+      <h1>Example 2</h1>
+      <app-input-help2 [form]="form2" [values]="values2"></app-input-help2>
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        class="ancho button" style="margin-top: 25px;"
+        [disabled]="!form.valid"
+      >
+        Acceder
+      </button>
+    </form>
+    <pre>{{ form2.valid}}</pre>
+    <pre>{{ form2.value | json }}</pre>
+  </div>
+</div>
